@@ -1,0 +1,12 @@
+<h1>Links#new</h1>
+<p>Find me in app/views/links/new.html.erb</p>
+<div class="container d-flex flex-row justify-content-center">
+<div class="row col-6 p-3 shadow border justify-content-center">
+  <%= simple_form_for(@link) do |f| %>
+    <%= f.input :destination_url, hint: 'Enter your url here', required: true %>
+    <%= f.input :title, hint: 'Provide a title if you want your short url to have a title' %>
+    <%= f.submit %>
+  <% end %>
+<div id='short-link'>Hello</div>
+</div>
+</div>
