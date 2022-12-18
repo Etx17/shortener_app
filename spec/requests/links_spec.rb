@@ -8,6 +8,11 @@ RSpec.describe 'Links', type: :request do
       get new_link_path
       expect(response).to have_http_status(200)
     end
+
+    it 'redirects when user is not signed in' do
+      get root_path
+      expect(response).to have_http_status(302)
+    end
   end
 
   # Todo:
