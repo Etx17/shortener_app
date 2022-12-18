@@ -4,4 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :links
+
+  # format is handled by devise
+  validates :email, presence: true, uniqueness: true
+
 end
