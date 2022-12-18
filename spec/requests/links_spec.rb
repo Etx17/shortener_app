@@ -9,4 +9,9 @@ RSpec.describe 'Links', type: :request do
       expect(response).to have_http_status(200)
     end
   end
+
+  # Todo:
+  # Test that links/create is generating a short_url
+  # Test redirection
+  # Test for admin page in another file. User should be redirected to root_path when he tries to access it, unless he is an admin.
 end
