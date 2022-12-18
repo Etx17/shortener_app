@@ -8,18 +8,16 @@
   <%= image_tag "link.jpeg", alt: "Link and toon link", width: 100%>
 </div>
 <div class="container d-flex flex-row justify-content-center">
-<div class="row col-6 p-3 shadow border justify-content-center">
-  <%= simple_form_for (@link) do |f| %>
-    <%= f.error_notification %>
-    <%= f.input :destination_url, hint: 'Enter your url here', required: true, id: 'destination-url' %>
-    <%= f.input :title,  hint: 'Provide a title if you want your short url to have a title' %>
-    <%= f.submit class: 'btn btn-primary my-2'%>
-  <% end %>
-  <% if current_user.links.any? %>
-    <p class="">Shortened link : <%= link_to current_user.links.last.short_url, "#{current_user.links.last.destination_url}" %></p>
-    <p class='w-100 overflow-auto'>Original link : <%=  link_to current_user.links.last.destination_url %></p>
-  <% end %>
-
-
-</div>
+  <div class="row col-6 p-3 shadow border justify-content-center">
+    <%= simple_form_for (@link) do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :destination_url, hint: 'Enter your url here', required: true, id: 'destination-url' %>
+      <%= f.input :title,  hint: 'Provide a title if you want your short url to have a title' %>
+      <%= f.submit class: 'btn btn-primary my-2'%>
+    <% end %>
+    <% if current_user.links.any? %>
+      <p class="">Shortened link : <%= link_to current_user.links.last.short_url, "#{current_user.links.last.destination_url}" %></p>
+      <p class='w-100 overflow-auto'>Original link : <%=  link_to current_user.links.last.destination_url %></p>
+    <% end %>
+  </div>
 </div>
