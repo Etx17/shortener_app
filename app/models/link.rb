@@ -3,6 +3,7 @@ class Link < ApplicationRecord
   validates :destination_url, presence: true
   validates_format_of :destination_url, with: /((?:https?\:\/\/|www\.)(?:[-a-z0-9]+\.)*[-a-z0-9]+.*)/i
   validates :title, length: { maximum: 10 }
+  validates :short_url, presence: true, uniqueness: true
 
   def shorten_url
     slug = rand(36**8).to_s(36)
