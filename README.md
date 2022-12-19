@@ -12,5 +12,5 @@ __Etapes :__
 4. Réflexion sur papier de la logique à mettre en place pour réduire une URL et évaluation d'un ou plusieurs cornercases ( A calibrer en fonction des attentes de la consigne. Ici, temps limité, donc il y a beaucoup de cornercases que je n'ai pas pu couvrir. Par exemple, je n'ai pas contraint le nombre d'urls qu'un utilisateur a le droit de raccourcir. En revanche, il me semble plus approprié d'empêcher que deux url réduites soient identiques.)  
 5. idéalement ici écriture des tests qui couvrent les specs que j'ai déduites des attentes que j'ai interprêtées de la consigne  
 6. Code : création du projet, installation des librairies, mise en place des modèles et des validations, de l'authentification, des controlleurs, de la logique de racourcissement d'url.  
-7. Redaction de tests  
+7. Redaction de tests, (authentification, controlleurs partiellement du au temps )
 8. Redaction du Readme.
